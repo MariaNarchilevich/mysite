@@ -1,0 +1,61 @@
+
+.calk {
+}
+.calk__title {
+  font-size: 25px;
+  font-weight: 700;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 30px 0;
+}
+.calk__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.body-calk-collumn {
+  flex: 0 1 50%;
+  margin: 10px 40px;
+}
+.body-calck__input {
+  border: 1px solid black;
+  padding: 20px;
+}
+.body-calck__form {
+}
+.input-field{
+  margin: 0px 0px 20px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.input-field >*:not(:last-child) {
+  margin: 0px 10px 0px 0px;
+}
+.input-field__left, .input-field__right {
+  height: 40px;
+  width: 100px;
+}
+.input-field__right {
+}
+.calk-form__buttton-fields {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.buttton-field {
+  height: 50px;
+  width: 50px;
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+.body-calck__output {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.calk-result{
+  font-size: 25px;
+  font-weight: 500;
+}
