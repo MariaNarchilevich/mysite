@@ -13,7 +13,7 @@
             <a href="../index.php">калькулятор</a>
           </li>
           <li class="header__link">
-            <a href="../components/page_formuls.php">формула</a>
+            <a href="../formula/page_formuls.php">формула</a>
           </li>
           <li class="header__link">
             <a href="exercise3.html">3 задание</a>

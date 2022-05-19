@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, instal-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>TheMasha</title>
-  <link rel="stylesheet" href="/css/style.css" />
-  <link rel="stylesheet" href="/css/calc.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/calc.css" />
 </head>
 
 <body>
   <?php
-  require('../mysite/components/header.php');
+  require('components/header.php');
   ?>
   <main>
     <div class="calk__container _container">
@@ -59,7 +59,7 @@
     </div>
   </main>
   <?php
-  require('../mysite/components/footer.php');
+  require('components/footer.php');
   ?>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="js/script.js"></script>
