@@ -14,9 +14,9 @@
  	<main>
 
  		<div class="tort__container _container">
- 			<h1 class="tort__title">Заказ кондитерского изделия</h1>
+ 			<div class="tort__title">Заказ кондитерского изделия</div>
  			<div class="tort__body">
- 				<form action="" class="tort__form form-tort">
+ 				<form action="../arend/bill.php" class="tort__form form-tort" method="GET" id="form">
  					<div class="cont-flex">
  						<div class="form-tort__testo testo cont-flex__item">
  							<div class="testo__title">Тесто</div>
@@ -82,33 +82,37 @@
  						<div class="data__input section-data">
  							<div class="section-data__item">
  								Имя
- 								<input type="text" class="input-text" required>
+ 								<input type="text" class="input-text" placeholder="Иван" pattern="^[A-Za-zА-Яа-яЁё]+$" required>
  							</div>
  							<div class="section-data__item">
  								Адрес
- 								<input type="text" class="input-text" required>
+ 								<input type="text" class="input-text" placeholder="ул. Мира д.220 кв.1" required>
  							</div>
  							<div class="section-data__item">
  								Телефон
- 								<input type="tel" class="input-text" placeholder="+7 (900) 123-45-67" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" required>
+ 								<input type="tel" class="input-text" placeholder="7 900 123 45 67" pattern="7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
  							</div>
  							<div class="section-data__item">
  								Дата доставки
- 								<input type="date" class="input-text" required>
+ 								<input type="date" class="input-text" name="date-dili" required>
  							</div>
  							<!-- другое поле -->
  							<div class="section-data__item">
  								Время доставки
- 								<input type="text" class="input-text" required>
+ 								<select name="time" id="">
+ 									<option value="t1">10:00 - 15:00</option>
+ 									<option value="t1">15:00 - 19:00</option>
+ 									<option value="t1">19:00 - 23:00</option>
+ 								</select>
  							</div>
  							<!-- другое поле -->
  							<div class="section-data__item">
- 								Файль с базовыми ценами
- 								<input type="text" class="input-text" required>
+ 								Файл с базовыми ценами
+ 								<input type="file" accept="text/plain" class="txt-file">
  							</div>
  							<!-- доработать кнопку классы -->
  							<div class="section-button__item ">
- 								<input type="submit" value="Отправить"></input>
+ 								<input type="submit" value="Отправить" class="button"></input>
  							</div>
  						</div>
  					</div>
@@ -120,6 +124,14 @@
  	<?php require('../components/footer.php'); ?>
  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
  	<script src="../js/script.js"></script>
+ 	<script>
+ 		var today = new Date().toISOString().split('T')[0];
+ 		document.getElementsByName("date-dili")[0].setAttribute('min', today);
+
+		 document.querySelector('.txt-file').addEventListener('change', (event) => {
+			$("#form").attr("method", "POST");
+		});
+ 	</script>
  </body>
 
  </html>

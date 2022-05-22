@@ -1,8 +1,15 @@
+.tort__title {
+  font-size: 30px;
+  font-weight: bold;
+  max-width: 800px;
+  margin: 10px auto;
+}
+
 .tort__body {
   border: 2px solid black;
   max-width: 800px;
   height: 100%;
-  margin: 0 100px;
+  margin: 10px auto;
 }
 
 .cont-flex {
@@ -31,6 +38,8 @@
 .data__title {
   margin: 0px 0px 10px 0px;
   font-size: 22px;
+  color: #605e5e;
+  font-weight: 600;
 }
 
 .decoration__title {
@@ -60,9 +69,15 @@
 }
 
 .section-data__item:not(:last-child) {
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 20px 0px;
 }
 
 .section-data__item {
   font-size: 18px;
+}
+
+.section-data__item input,
+.section-data__item select {
+  margin: 0px 0px 0px 10px;
+  padding: 5px;
 }
