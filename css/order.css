@@ -1,0 +1,68 @@
+.tort__body {
+  border: 2px solid black;
+  max-width: 800px;
+  height: 100%;
+  margin: 0 100px;
+}
+
+.cont-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cont-flex__item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33.333%;
+          flex: 0 1 33.333%;
+  border: 2px solid black;
+  padding: 15px;
+}
+
+.form-tort__data {
+  border: 2px solid black;
+  padding: 15px;
+}
+
+.testo__title,
+.cream__title,
+.decoration__title,
+.type__title,
+.data__title {
+  margin: 0px 0px 10px 0px;
+  font-size: 22px;
+}
+
+.decoration__title {
+  margin-top: 25px;
+}
+
+.type__select {
+  width: 150px;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.section-radio__item:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.section-radio__item {
+  font-size: 18px;
+}
+
+.section-checkbox__item:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.section-checkbox__item {
+  font-size: 18px;
+}
+
+.section-data__item:not(:last-child) {
+  margin: 0px 0px 10px 0px;
+}
+
+.section-data__item {
+  font-size: 18px;
+}

@@ -16,7 +16,7 @@
             <a href="../formula/page_formuls.php">формула</a>
           </li>
           <li class="header__link">
-            <a href="exercise3.html">3 задание</a>
+            <a href="../arend/order.php">заказ торта</a>
           </li>
           <li class="header__link">
             <a href="exercise4.html">4 задание</a>
