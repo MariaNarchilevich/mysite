@@ -22,13 +22,13 @@
  							<div class="testo__title">Тесто</div>
  							<div class="testo__radio section-radio">
  								<div class="section-radio__item">
- 									<input type="radio" class="input-radio" name="tort" value="Бисквит" checked> Бисквит
+ 									<input type="radio" class="input-radio" name="product[testo]" value="Бисквит" checked> Бисквит
  								</div>
  								<div class="section-radio__item">
- 									<input type="radio" class="input-radio" name="tort" value="Песочный"> Песочный
+ 									<input type="radio" class="input-radio" name="product[testo]" value="Песочное"> Песочное
  								</div>
  								<div class="section-radio__item">
- 									<input type="radio" class="input-radio" name="tort" value="Безе"> Безе
+ 									<input type="radio" class="input-radio" name="product[testo]" value="Безе"> Безе
  								</div>
  							</div>
  						</div>
@@ -37,13 +37,13 @@
  								<div class="cream__title">Крем</div>
  								<div class="cream__radio section-radio">
  									<div class="section-radio__item">
- 										<input type="radio" class="input-radio" name="cream" value="Маслянный" checked> Маслянный
+ 										<input type="radio" class="input-radio" name="product[cream]" value="Маслянный" checked> Маслянный
  									</div>
  									<div class="section-radio__item">
- 										<input type="radio" class="input-radio" name="cream" value="Заварной"> Заварной
+ 										<input type="radio" class="input-radio" name="product[cream]" value="Заварной"> Заварной
  									</div>
  									<div class="section-radio__item">
- 										<input type="radio" class="input-radio" name="cream" value="Фруктовый"> Фруктовый
+ 										<input type="radio" class="input-radio" name="product[cream]" value="Фруктовый"> Фруктовый
  									</div>
  								</div>
  							</div>
@@ -51,28 +51,28 @@
  								<div class="decoration__title">Украшения</div>
  								<div class="decoration__checkbox section-checkbox">
  									<div class="section-checkbox__item">
- 										<input type="checkbox" class="input-checkbox" name="decoration1" value="Маслянный"> Глазурь
+ 										<input type="checkbox" class="input-checkbox" name="decoration[]" value="глазурь"> Глазурь
  									</div>
  									<div class="section-checkbox__item">
- 										<input type="checkbox" class="input-checkbox" name="decoration2" value="Заварной"> Фигурки
+ 										<input type="checkbox" class="input-checkbox" name="decoration[]" value="фигурки"> Фигурки
  									</div>
  								</div>
  							</div>
  						</div>
  						<div class="form-tort__type type cont-flex__item">
  							<div class="type__title">Вид изделия</div>
- 							<select class="type__select section-select" name="tort-type">
+ 							<select class="type__select section-select" name="product[type]">
  								<optgroup label="Торты">
- 									<option class="section-select__item" value="t1"> Круглые</option>
- 									<option class="section-select__item" value="t2"> Квадратные</option>
+ 									<option class="section-select__item"  value="Торт круглый"> Круглый</option>
+ 									<option class="section-select__item"  value="Торт квадратный"> Квадратный</option>
  								</optgroup>
  								<optgroup label="Пирожные">
- 									<option class="section-select__item" value="p1"> Отдельные</option>
- 									<option class="section-select__item" value="p2"> В формочке</option>
+ 									<option class="section-select__item"  value="пирожные отдельно"> Отдельные</option>
+ 									<option class="section-select__item"  value="пирожные в формочке"> В формочке</option>
  								</optgroup>
  								<optgroup label="Десерты">
- 									<option class="section-select__item" value="d1"> В бокале</option>
- 									<option class="section-select__item" value="d2"> В баночке</option>
+ 									<option class="section-select__item"  value="десерты в бокале"> В бокале</option>
+ 									<option class="section-select__item"  value="десерты в баночке"> В баночке</option>
  								</optgroup>
  							</select>
  						</div>
@@ -82,27 +82,27 @@
  						<div class="data__input section-data">
  							<div class="section-data__item">
  								Имя
- 								<input type="text" class="input-text" placeholder="Иван" pattern="^[A-Za-zА-Яа-яЁё]+$" required>
+ 								<input type="text" name="date[name]" class="input-text" placeholder="Иван" pattern="^[A-Za-zА-Яа-яЁё]+$" required>
  							</div>
  							<div class="section-data__item">
  								Адрес
- 								<input type="text" class="input-text" placeholder="ул. Мира д.220 кв.1" required>
+ 								<input type="text" name="date[address]" class="input-text" placeholder="ул. Мира д.220 кв.1" required>
  							</div>
  							<div class="section-data__item">
  								Телефон
- 								<input type="tel" class="input-text" placeholder="7 900 123 45 67" pattern="7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
+ 								<input type="tel" name="date[phone]" class="input-text" placeholder="7 900 123 45 67" pattern="7\s[0-9]{3}\s[0-9]{3}\s[0-9]{2}\s[0-9]{2}" required>
  							</div>
  							<div class="section-data__item">
  								Дата доставки
- 								<input type="date" class="input-text" name="date-dili" required>
+ 								<input type="date" class="input-text" name="date[date-dili]" required>
  							</div>
  							<!-- другое поле -->
  							<div class="section-data__item">
  								Время доставки
- 								<select name="time" id="">
- 									<option value="t1">10:00 - 15:00</option>
- 									<option value="t1">15:00 - 19:00</option>
- 									<option value="t1">19:00 - 23:00</option>
+ 								<select name="date[time]" id="">
+ 									<option value="10:00 - 15:00">10:00 - 15:00</option>
+ 									<option value="15:00 - 19:00">15:00 - 19:00</option>
+ 									<option value="19:00 - 23:00">19:00 - 23:00</option>
  								</select>
  							</div>
  							<!-- другое поле -->
