@@ -6,7 +6,7 @@
  	<meta name="viewport" content="width=device-width, instal-scale=1.0, maximum-scale=1.0, user-scalable=0" />
  	<title>TheMasha</title>
  	<link rel="stylesheet" href="../css/style.css" />
- 	<link rel="stylesheet" href="../css/order.css" />
+ 	<link rel="stylesheet" href="../css/bill.css" />
  </head>
 
  <body>
@@ -14,7 +14,7 @@
 
  	<main>
 	 <div class="bill__container _container">
-	  <div class="bill__title">Заказ кондитерского изделия</div>
+	  
 			<?php 
 			//цены по умолчанию если в документе их нет
 			$testo = 600;
@@ -68,62 +68,64 @@
 			$description_type = "";
 			$description_testo = "";
 			$description_cream = "";
-			switch(strtolower($product['type'])){
+
+			switch(mb_strtolower($product['type'])){
 				case "торт круглый":
 					$description_type = "Самый круглый!";
 					 $margin_type = $tort; $result +=$margin_type;
 					 break;
 				case "торт квадратный":
-					$description_type = "идеально ровные углы!";
+					$description_type = "Идеально ровные углы!";
 				    $margin_type = $tort; $result +=$margin_type;
 					 break;
 				case "пирожные в формочке":
-					$description_type = "самые классные формочки!";
+					$description_type = "Самые классные формочки!";
 					 $margin_type = $cupcakes; $result +=$margin_type;
 					 break;
 				case "пирожные отдельные":
-					$description_type = "лычшие в мире!";
+					$description_type = "Лучшие в мире!";
 					 $margin_type = $cupcakes; $result +=$margin_type;
 					 break;
 				case "десерты в бокале":
-					$description_type = "очень вкусные!";
+					$description_type = "Очень вкусные!";
 					 $margin_type = $cupcakes; $result +=$margin_type;
 					 break;
 				case "десерты в баночке":
-					$description_type = "очень вкусные!";
+					$description_type = "Очень вкусные!";
 					 $margin_type = $cupcakes; $result +=$margin_type;
 					 break;
 			}
 
-			switch(strtolower($product['testo'])){
+			switch(mb_strtolower($product['testo'])){
 				case "песочное":
-					$description_testo = "невероятно расспчатое, просто тает во рту";
+					$description_testo = "Невероятно расспчатое, просто тает во рту";
 					 $margin_testo = $shortbread; $result +=$margin_testo;
 					 break;
 				case "бисквит":
-					$description_testo = "очень пышный и мягкий";
+					$description_testo = "Очень пышный и мягкий";
 					 $margin_testo = $biscuit; $result +=$margin_testo;
 					 break;
 				case "безе":
-					$description_testo = "используются самые лучшие белки";
+					$description_testo = "Используются самые лучшие белки";
 					 $margin_testo = $meringue; $result +=$margin_testo;
 					 break;
 			}
-			switch(strtolower($product['cream'])){
+			switch(mb_strtolower($product['cream'])){
 				case "маслянный":
-					$description_cream = "сделано из лучшего масла";
+					$description_cream = "Сделан из лучшего масла";
 					 $margin_cream = $cream; $result +=$margin_cream;
 					 break;
 				case "заварной":
-					$description_testo = "на основе натуральных сливок";
+					$description_testo = "На основе натуральных сливок";
 					$margin_cream = $cream; $result +=$margin_cream;
 					 break;
 				case "фруктовый":
-					$description_testo = "подобрано идеальное сочетание фруктов";
+					$description_testo = "Подобрано идеальное сочетание фруктов";
 					$margin_cream = $cream; $result +=$margin_cream;
 					 break;
 			}
 			?>
+		<div class="bill__title">Заказ кондитерского изделия</div>
 		<div class="bill__body body-bill">
 			<div class="body-bill__baze-tort baze">Базовая цена теста <?php echo $testo ?> рублей</div>
 			<div class="body-bill__baze-cream baze">Базовая цена крема <?php echo $cream ?> рублей</div>
@@ -132,7 +134,7 @@
 					<td>Вид изделия</td>
 					<td><?php  echo  $product['type']  ?></td>
 					<td>
-						<?php  echo  var_dump($description_type)  ?><br>
+						<?php  echo  $description_type  ?><br>
 						Наценка: <?php  echo  $margin_type  ?> рублей
 					</td>
 				</tr>
@@ -155,38 +157,57 @@
 				<tr>
 					<td>Украшения</td>
 					<?php 
-					 	if (count($decor)==0){
-							 echo
+					switch(count($decor)) {
+						case 0:
+							echo
 							"<td>-</td>
 							<td> 0 рублей</td>";
-						 }
-					?>
-					<!-- <td></td>
-					<td></td> -->
+							break;
+						case 1:
+							echo
+						  "<td>$decor[0]</td>";
+						  if (mb_strtolower($decor[0]) == "глазурь")
+						  {
+							$result += $glaze;
+							echo "<td> $glaze рублей</td>";
+						  }
+						  else  {
+							$result += $figurines;
+							echo "<td> $figurines рублей</td>";
+						  }
+						  break;
+						case 2:
+							echo
+						  "<td>$decor[0]<br> $decor[1]</td>";
+							echo "<td> $glaze рублей <br> $figurines рублей</td>";
+							$result += $figurines;
+							$result += $glaze;					  
+					}?>
+
 				</tr>
 				<tr>
 					<td>Имя заказчика</td>
-					<td><?php echo $date['name'] ?></td>
+					<td colspan="2"><?php echo $date['name'] ?></td>
 				</tr>
 				<tr>
 					<td>Адрес</td>
-					<td><?php echo $date['address'] ?></td>
+					<td colspan="2"><?php echo $date['address'] ?></td>
 				</tr>
 				<tr>
 					<td>Телефон</td>
-					<td><?php $date['phone'] ?></td>
+					<td colspan="2"><?php echo $date['phone'] ?></td>
 				</tr>
 				<tr>
 					<td>Дата доставки</td>
-					<td><?php echo $date['date-dili'] ?></td>
+					<td colspan="2"><?php echo $date['date-dili'] ?></td>
 				</tr>
 				<tr>
 					<td>Время доставки</td>
-					<td><?php echo $date['time'] ?></td>
+					<td colspan="2"><?php echo $date['time'] ?></td>
 				</tr>
 				<tr>
 					<td>Итого</td>
-					<td></td>
+					<td colspan="2"><?php echo $result ?></td>
 				</tr>
 			</table>
 		</div>

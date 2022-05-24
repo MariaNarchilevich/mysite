@@ -51,10 +51,10 @@
  								<div class="decoration__title">Украшения</div>
  								<div class="decoration__checkbox section-checkbox">
  									<div class="section-checkbox__item">
- 										<input type="checkbox" class="input-checkbox" name="decoration[]" value="глазурь"> Глазурь
+ 										<input type="checkbox" class="input-checkbox" name="decoration[]" value="Глазурь"> Глазурь
  									</div>
  									<div class="section-checkbox__item">
- 										<input type="checkbox" class="input-checkbox" name="decoration[]" value="фигурки"> Фигурки
+ 										<input type="checkbox" class="input-checkbox" name="decoration[]" value="Фигурки"> Фигурки
  									</div>
  								</div>
  							</div>
@@ -67,12 +67,12 @@
  									<option class="section-select__item"  value="Торт квадратный"> Квадратный</option>
  								</optgroup>
  								<optgroup label="Пирожные">
- 									<option class="section-select__item"  value="пирожные отдельно"> Отдельные</option>
- 									<option class="section-select__item"  value="пирожные в формочке"> В формочке</option>
+ 									<option class="section-select__item"  value="Пирожные отдельно"> Отдельные</option>
+ 									<option class="section-select__item"  value="Пирожные в формочке"> В формочке</option>
  								</optgroup>
  								<optgroup label="Десерты">
- 									<option class="section-select__item"  value="десерты в бокале"> В бокале</option>
- 									<option class="section-select__item"  value="десерты в баночке"> В баночке</option>
+ 									<option class="section-select__item"  value="Десерты в бокале"> В бокале</option>
+ 									<option class="section-select__item"  value="Десерты в баночке"> В баночке</option>
  								</optgroup>
  							</select>
  						</div>
@@ -99,7 +99,7 @@
  							<!-- другое поле -->
  							<div class="section-data__item">
  								Время доставки
- 								<select name="date[time]" id="">
+ 								<select name="date[time]" >
  									<option value="10:00 - 15:00">10:00 - 15:00</option>
  									<option value="15:00 - 19:00">15:00 - 19:00</option>
  									<option value="19:00 - 23:00">19:00 - 23:00</option>
@@ -126,7 +126,7 @@
  	<script src="../js/script.js"></script>
  	<script>
  		var today = new Date().toISOString().split('T')[0];
- 		document.getElementsByName("date-dili")[0].setAttribute('min', today);
+ 		document.getElementsByName("date[date-dili]")[0].setAttribute('min', today);
 
 		 document.querySelector('.txt-file').addEventListener('change', (event) => {
 			$("#form").attr("method", "POST");
