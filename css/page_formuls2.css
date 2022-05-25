@@ -1,0 +1,33 @@
+.function__container {
+}
+._container {
+}
+.function__title {
+	font-size: 25px;
+  font-weight: 700;
+  margin: 0px 0px 10px 0px;
+}
+.function__body {
+}
+.function__items {
+}
+.function__item {
+	font-size: 18px;
+	margin: 0px 0px 5px 0px;
+}
+
+table {
+	margin-top: 10px;
+	table-layout: fixed;
+	width: 60%;
+	min-width: 355px;
+	border-collapse: collapse;
+	font-size: 18px;
+ }
+ 
+ th, td {
+	padding: 10px;
+	text-align: center;
+	border: 2px solid black;
+
+ }

@@ -148,5 +148,23 @@
 
 .section-button {
 	&__item {
+		& input{
+			padding: 5px;
+		}
+	}
+	
+}
+
+@media (max-width: 645.98px) {
+	
+	.cont-flex {
+		flex-wrap: wrap;
+		&__item {
+			flex: 0 1 100%;
+			text-align: center;
+		}
+	}
+	.form-tort__data, .tort__title  {
+		text-align: center;
 	}
 }

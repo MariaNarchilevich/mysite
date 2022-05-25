@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, instal-scale=1.0, maximum-scale=1.0, user-scalable=0" />
    <title>formul</title>
    <link rel="stylesheet" href="../css/style.css" />
-   <link rel="stylesheet" href="../css/func.css" />
+   <link rel="stylesheet" href="../css/page_formuls2.css" />
 </head>
 
 <body>
@@ -26,7 +26,7 @@
             $str = "число под корнем не может быть отрицаетльным";
          } else {
             $x = (pow(($a + sqrt($b)), 2)) / (pow($c, 3));
-            // форматированное число
+            $xFormat = round($x,3);
             $str = "<table>
                <tr>
                <th>a</th>
@@ -38,7 +38,7 @@
                <td>$a</td>
                <td>$b</td>
                <td>$c</td>
-               <td>$x</td>
+               <td>$xFormat</td>
                </tr>     
             </table>";
          }
@@ -50,11 +50,11 @@
          <div class="function__title"> Принимаем данные </div>
          <div class="function__body">
             <div class="function__items">
-               <div class="function__item"><?php echo $a ?></div>
-               <div class="function__item"><?php echo $b ?></div>
-               <div class="function__item"><?php echo $c ?></div>
-               <div class="function__item"><?php echo $x ?></div>
-               <div class="function__item"></div>
+               <div class="function__item">a = <?php echo $a ?></div>
+               <div class="function__item">b = <?php echo $b ?></div>
+               <div class="function__item">c = <?php echo $c ?></div>
+               <div class="function__item">x = <?php echo $x ?></div>
+               <div class="function__item">форматированное x = <?php echo $xFormat ?></div>
                <div class="function__item"><?php echo $str ?></div>
             </div>
          </div>
@@ -64,7 +64,7 @@
    require('../components/footer.php');
    ?>
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-   <script src="js/script.js"></script>
+   <script src="../js/script.js"></script>
 </body>
 
 </html>

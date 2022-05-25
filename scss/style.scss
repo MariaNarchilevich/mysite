@@ -75,6 +75,46 @@ body {
     font-family: "Bebas Neue", "Arial", sans-serif;
 }
 
+
+
+main {
+    padding: 90px 0;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: brown;
+    max-height: 50px;
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__email {
+        padding: 0 10px 0 0;
+        color: #fff;
+    }
+
+    &__phone {
+        padding: 0 10px 0 0;
+        color: #fff;
+    }
+
+    &__site-dev {
+        color: #fff;
+    }
+}
+
 @media (max-width:767px){
     p {
         font-size: 15px;
@@ -157,6 +197,10 @@ body {
         margin: 0 0 20px 0;
     }
 
+    main {
+        padding: 60px 0;
+    }
+
      .footer {
 
 		&__body {
@@ -184,42 +228,3 @@ body {
 		}
     }
 }
-
-main {
-    padding: 90px 0;
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: brown;
-    max-height: 50px;
-    &__body {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        flex-wrap: wrap;
-    }
-
-    &__contact {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    &__email {
-        padding: 0 10px 0 0;
-        color: #fff;
-    }
-
-    &__phone {
-        padding: 0 10px 0 0;
-        color: #fff;
-    }
-
-    &__site-dev {
-        color: #fff;
-    }
-}
-

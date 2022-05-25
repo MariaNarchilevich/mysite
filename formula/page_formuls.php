@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, instal-scale=1.0, maximum-scale=1.0, user-scalable=0" />
   <title>formul</title>
   <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/func.css" />
+  <link rel="stylesheet" href="../css/page_formuls.css" />
 </head>
 
 <body>
@@ -17,7 +17,7 @@
     <div class="func__container _container">
       <div class="func__body">
         <div class="func__title">
-          <h1 class="title-func">Вычисление функции</h1>
+          <div>Вычисление функции</div>
           <img src="../img/01.png" alt="func">
         </div>
         <div class="func__form form-func">
@@ -45,7 +45,7 @@
   require('../components/footer.php');
   ?>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 
 </html>

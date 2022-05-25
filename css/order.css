@@ -81,3 +81,23 @@
   margin: 0px 0px 0px 10px;
   padding: 5px;
 }
+
+.section-button__item input {
+  padding: 5px;
+}
+
+@media (max-width: 645.98px) {
+  .cont-flex {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cont-flex__item {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    text-align: center;
+  }
+  .form-tort__data, .tort__title {
+    text-align: center;
+  }
+}
