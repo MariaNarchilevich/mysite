@@ -18,9 +18,6 @@
           <li class="header__link">
             <a href="../arend/order.php">заказ торта</a>
           </li>
-          <li class="header__link">
-            <a href="exercise4.html">4 задание</a>
-          </li>
         </ul>
       </nav>
     </div>

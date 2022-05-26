@@ -10,13 +10,14 @@
  </head>
 
  <body>
+ <div class="wrapper">
  	<?php require('../components/header.php'); ?>
  	<main>
 
  		<div class="tort__container _container">
  			<div class="tort__title">Заказ кондитерского изделия</div>
  			<div class="tort__body">
- 				<form action="../arend/bill.php" class="tort__form form-tort" method="GET" id="form">
+ 				<form action="../arend/bill.php" class="tort__form form-tort" method="GET" id="form" enctype="multipart/form-data">
  					<div class="cont-flex">
  						<div class="form-tort__testo testo cont-flex__item">
  							<div class="testo__title">Тесто</div>
@@ -108,7 +109,7 @@
  							<!-- другое поле -->
  							<div class="section-data__item">
  								Файл с базовыми ценами
- 								<input type="file" accept="text/plain" class="txt-file">
+ 								<input type="file" accept="text/plain" class="txt-file" name="price">
  							</div>
  							<!-- доработать кнопку классы -->
  							<div class="section-button__item ">
@@ -122,6 +123,7 @@
  	</main>
 
  	<?php require('../components/footer.php'); ?>
+ </div>
  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
  	<script src="../js/script.js"></script>
  	<script>

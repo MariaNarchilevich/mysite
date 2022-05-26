@@ -10,10 +10,11 @@
 </head>
 
 <body>
+  <div class="wrapper">
     <?php
     require('components/header.php');
     ?>
-    <main>
+    <main>     
       <div class="calk__container _container">
         <div class="calk__title">Калькулятор</div>
         <div class="calk__body body-calk">
@@ -61,6 +62,7 @@
     <?php
     require('components/footer.php');
     ?>
+    </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="js/script.js"></script>
 </body>

@@ -10,6 +10,7 @@
  </head>
 
  <body>
+ <div class="wrapper">
  	<?php require('../components/header.php'); ?>
 
  	<main>
@@ -21,7 +22,27 @@
 			$cream = 200;
 			$dilivery = 100;
 
-			$myfile = fopen("../txt/price.txt", "r") or die("Unable to open file!");
+			if (isset($_GET)){
+			$myfile = fopen("../txt/price1.txt", "r") or die("Unable to open file!");
+
+			$product = $_GET['product']; 
+			$date = $_GET['date'];
+			$decor = $_GET['decoration'];
+			}
+			if (isset($_POST)){
+				$current_path = $_FILES['price']['tmp_name'];
+				$filename = $_FILES['price']['name'];
+				$new_path = dirname("../txt") . '/' . $filename;
+
+				move_uploaded_file($current_path, $new_path);
+
+				$myfile = fopen('../price.txt', "r") or die("Unable to open file!");
+				
+				$product = $_POST['product']; 
+				$date = $_POST['date'];
+				$decor = $_POST['decoration'];
+			}
+
 			$arr = []; $k=0;
 			while(!feof($myfile)) {
 				$arr[$k] = fgets($myfile) ;
@@ -60,10 +81,6 @@
 			$figurines = 80;
 
 			$result = $testo + $cream + $dilivery;
-
-			$product = $_GET['product'];
-			$date = $_GET['date'];
-			$decor = $_GET['decoration'];
 
 			$description_type = "";
 			$description_testo = "";
@@ -215,6 +232,7 @@
  	</main>
 
  	<?php require('../components/footer.php'); ?>
+ </div>
  	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
  	<script src="../js/script.js"></script>
  </body>

@@ -10,6 +10,7 @@
 </head>
 
 <body>
+<div class="wrapper">
   <?php
   require('../components/header.php');
   ?>
@@ -44,6 +45,7 @@
   <?php
   require('../components/footer.php');
   ?>
+</div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="../js/script.js"></script>
 </body>
