@@ -21,8 +21,10 @@
           <div class="body-calck__input body-calk-collumn">
             <form action="" method="GET" class="body-calck__form calk-form">
               <div class="calk-form__input-fields input-field">
-                <input type="number" class="input-field__left" name="number1">
-                <input type="number" class="input-field__right" name="number2">
+                <input type="number" class="input-field__left" name="number1" value="<?php if (isset($_GET['number1']))
+                echo $_GET['number1']; else echo '' ?>">
+                <input type="number" class="input-field__right" name="number2" value="<?php if (isset($_GET['number2']))
+                echo $_GET['number2']; else echo '' ?>">
               </div>
               <div class="calk-form__buttton-fields">
                 <input class="buttton-field" value="+" type="submit" name="plus"></input>
