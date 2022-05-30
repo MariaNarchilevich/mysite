@@ -113,7 +113,7 @@
  							</div>
  							
  							<div class="section-button__item ">
- 								<input type="submit" value="Отправить" class="button"></input>
+ 								<input type="submit" value="Отправить" class="button" name="submit"></input>
  							</div>
  						</div>
  					</div>

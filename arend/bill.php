@@ -22,14 +22,14 @@
 			$cream = 200;
 			$dilivery = 100;
 
-			if (isset($_GET)){
+			if (isset($_GET['submit'])){
 			$myfile = fopen("../txt/price1.txt", "r") or die("Unable to open file!");
 
 			$product = $_GET['product']; 
 			$date = $_GET['date'];
 			$decor = $_GET['decoration'];
 			}
-			if (isset($_POST)){
+			if (isset($_POST['submit'])){
 				$current_path = $_FILES['price']['tmp_name'];
 				$filename = $_FILES['price']['name'];
 				$new_path = '../txt' . '/' . $filename;
@@ -58,7 +58,7 @@
 				}
 			}
 			fclose($myfile);
-			if (isset($_POST)){unlink($new_path);}
+			if (isset($_POST['submit'])){unlink($new_path);}
 
 			for ($i=0; $i < count($newa); $i++)
 			{
