@@ -58,6 +58,7 @@
 				}
 			}
 			fclose($myfile);
+			if (isset($_POST)){unlink($new_path);}
 
 			for ($i=0; $i < count($newa); $i++)
 			{
