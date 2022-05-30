@@ -76,12 +76,10 @@
 			$shortbread = 50;
 
 			$dilivery_night = $dilivery*2;
-			$dilivery_evening = $dilivery + $dilivery+0.2;
+			$dilivery_evening = $dilivery + $dilivery*0.2;
 
 			$glaze = 30;
 			$figurines = 80;
-
-			$result = $testo + $cream + $dilivery;
 
 			$description_type = "";
 			$description_testo = "";
@@ -142,11 +140,26 @@
 					$margin_cream = $cream; $result +=$margin_cream;
 					 break;
 			}
+			switch($date['time']){
+				case "19:00 - 23:00":
+					$result = $testo + $cream + $dilivery_night;
+					$str_dili = "Стоимость доставки ". $dilivery_night;
+					 break;
+				case "15:00 - 19:00":
+					$result = $testo + $cream + $dilivery_evening;
+					$str_dili = "Стоимость доставки ". $dilivery_evening;
+					 break;
+				default:
+					$result = $testo + $cream + $dilivery;
+					$str_dili = "Стоимость доставки ". $dilivery;
+					 break;
+			}
 			?>
 		<div class="bill__title">Заказ кондитерского изделия</div>
 		<div class="bill__body body-bill">
 			<div class="body-bill__baze-tort baze">Базовая цена теста <?php echo $testo ?> рублей</div>
 			<div class="body-bill__baze-cream baze">Базовая цена крема <?php echo $cream ?> рублей</div>
+			<div class="body-bill__baze-dili baze"> <?php echo $str_dili?> рублей</div>
 			<table class="body-bill__table bill-table">
 				<tr>
 					<td>Вид изделия</td>
