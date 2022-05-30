@@ -97,7 +97,7 @@
  								Дата доставки
  								<input type="date" class="input-text" name="date[date-dili]" required>
  							</div>
- 							<!-- другое поле -->
+ 							
  							<div class="section-data__item">
  								Время доставки
  								<select name="date[time]" >
@@ -106,12 +106,12 @@
  									<option value="19:00 - 23:00">19:00 - 23:00</option>
  								</select>
  							</div>
- 							<!-- другое поле -->
+ 							
  							<div class="section-data__item">
  								Файл с базовыми ценами
  								<input type="file" accept="text/plain" class="txt-file" name="price">
  							</div>
- 							<!-- доработать кнопку классы -->
+ 							
  							<div class="section-button__item ">
  								<input type="submit" value="Отправить" class="button"></input>
  							</div>

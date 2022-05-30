@@ -32,11 +32,11 @@
 			if (isset($_POST)){
 				$current_path = $_FILES['price']['tmp_name'];
 				$filename = $_FILES['price']['name'];
-				$new_path = dirname("../txt") . '/' . $filename;
+				$new_path = '../txt' . '/' . $filename;
 
 				move_uploaded_file($current_path, $new_path);
 
-				$myfile = fopen('../price.txt', "r") or die("Unable to open file!");
+				$myfile = fopen($new_path, "r") or die("Unable to open file!");
 				
 				$product = $_POST['product']; 
 				$date = $_POST['date'];
